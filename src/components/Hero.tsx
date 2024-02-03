@@ -10,7 +10,7 @@ export default function Hero() {
           CREATIVE WEBSITE SIMPLIFIES SALES & MARKETING
         </Typography>
         <div>
-          <Button variant="primary"> LES'T tALK </Button>
+          <Button variant="primary"> LETS tALK </Button>
         </div>
 
         <Typography variant="lg" customWeight="light" className="text-end">
