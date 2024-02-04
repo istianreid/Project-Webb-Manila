@@ -12,7 +12,16 @@ interface Inputs {
   register: any;
 }
 
-export const FormInput = ({ name, type, placeholder, errorMessage, label, required, errors, register }: Inputs) => {
+export const FormInput = ({
+  name,
+  type,
+  placeholder,
+  errorMessage,
+  label,
+  required,
+  errors,
+  register,
+}: Inputs) => {
   const isEmail = type === "email";
 
   const validationRules = isEmail
@@ -53,14 +62,14 @@ export const FormInput = ({ name, type, placeholder, errorMessage, label, requir
           id={name}
           name={name}
           {...register(name, validationRules)}
-          className="block w-full border-b-2 border-white py-1 bg-black text-white focus:outline-none focus:ring-0 focus:ring-white"
+          className="block w-full border-b-2 border-white bg-black py-1 text-white focus:outline-none focus:ring-0 focus:ring-white"
           placeholder={placeholder}
         />
         <ErrorMessage
           errors={errors}
           name={name}
           render={({ message }) => (
-            <Typography variant="xs" customColor="text-red-400">
+            <Typography variant="xs" color="text-red-400">
               {message}
             </Typography>
           )}

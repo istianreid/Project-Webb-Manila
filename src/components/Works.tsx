@@ -15,21 +15,21 @@ export default function Works() {
     {
       title: "CHUMMY STAR DENTAL CARE",
       content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis ",
+        "Transforming smiles through comprehensive dental expertise, from orthodontics to cosmetic procedures, implants, surgeries, and general care.",
       image: "/work images/Chummy Star.png",
     },
 
     {
       title: "CARASAQUIT LAW & NOTARIAL OFFICE",
       content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis ",
+        "Advocating your rights with experience and dedication. Your reliable partner for legal solutions and peace of mind. Expertise, Integrity, Results.",
       image: "/work images/Carasaquit Law Office.png",
     },
 
     {
       title: "K NETWORK",
       content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis ",
+        "K Network is an organization that aims to bridge education oppurtunity gap through initiatives designed to support every learner in reaching their full potential.",
       image: "/work images/K Network.png",
     },
   ];
@@ -37,24 +37,43 @@ export default function Works() {
   return (
     <SectionContainer>
       <div className="container mx-auto ">
-        <Typography variant="h1" customWeight="bold" className="my-20">
-          RECENT & ONGOING WORK.
-        </Typography>
-        {/* <Line variant="horizontal" /> */}
+        <div className="flex flex-col gap-5 lg:gap-10">
+          <Typography element="h2" variant="7xl" weight="bold">
+            RECENT & ONGOING WORK.
+          </Typography>
+          <Line variant="horizontal" />
+        </div>
 
         <div>
           {work.map((item, i) => (
-            <div key={i} className="flex items-center border-t-2 py-32 px-10">
-              <div className="w-6/12 flex flex-col gap-10 ">
-                <Typography variant="h3" customWeight="semibold" className="w-[60%]">
+            <div
+              key={i}
+              className="flex flex-wrap-reverse items-center gap-10 border-b-2 px-5 py-20 last:border-none lg:flex-nowrap lg:px-10 lg:py-32"
+            >
+              <div className="flex w-full flex-col gap-5 lg:w-6/12 lg:gap-10 ">
+                <Typography
+                  variant="5xl"
+                  weight="semibold"
+                  className="lg:w-[95%] 2xl:w-[80%]"
+                >
                   {item.title}
                 </Typography>
-                <Typography variant="lg" customWeight="light" className="w-[80%]">
+                <Typography
+                  variant="lg"
+                  weight="light"
+                  className=" lg:w-[95%] 2xl:w-[80%]"
+                >
                   {item.content}
                 </Typography>
               </div>
-              <div className="w-6/12">
-                <Image src={item.image} alt={item.title} width={735} height={474} className="mx-auto" />
+              <div className="w-full lg:w-6/12">
+                <Image
+                  src={item.image}
+                  alt={item.title}
+                  width={735}
+                  height={474}
+                  className="mx-auto"
+                />
               </div>
             </div>
           ))}

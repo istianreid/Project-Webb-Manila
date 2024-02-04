@@ -18,6 +18,8 @@ const dm_serif = DM_Serif_Display({
   display: "swap",
 });
 
+type ElementVariant = "h1" | "h2" | "h3" | "p";
+
 type TypographyVariant =
   // Text
   | "xs"
@@ -25,18 +27,29 @@ type TypographyVariant =
   | "md"
   | "lg"
   | "xl"
-  // Display
-  | "h6"
-  | "h5"
-  | "h4"
-  | "h3"
-  | "h2"
-  | "h1"
+  | "2xl"
+  | "3xl"
+  | "4xl"
+  | "5xl"
+  | "6xl"
+  | "7xl"
+  | "8xl"
+  | "9xl"
   | "custom1";
 
-type TypographyWeightOption = "light" | "regular" | "medium" | "semibold" | "bold";
+type TypographyWeightOption =
+  | "light"
+  | "regular"
+  | "medium"
+  | "semibold"
+  | "bold";
 
-type TypographyWeightValue = "font-light" | "font-normal" | "font-medium" | "font-semibold" | "font-bold";
+type TypographyWeightValue =
+  | "font-light"
+  | "font-normal"
+  | "font-medium"
+  | "font-semibold"
+  | "font-bold";
 
 type TypographyFontFamily = "poppins" | "dmserif";
 
@@ -46,16 +59,23 @@ const TypographyVariantClasses: Record<TypographyVariant, string> = {
   md: classNames("text-sm lg:text-md"),
   lg: classNames("text-sm md:text-md lg:text-lg"),
   xl: classNames("text-sm md:text-md lg:text-lg xl:text-xl"),
-  h6: classNames("text-md md:text-lg lg:text-xl xl:text-h6"),
-  h5: classNames("text-lg md:text-xl lg:text-h6 xl:text-h5"),
-  h4: classNames("text-xl md:text-h6 lg:text-h5 xl:text-h4"),
-  h3: classNames("text-h6 md:text-h5 lg:text-h4 xl:text-h3"),
-  h2: classNames("text-h5 md:text-h4 lg:text-h3 xl:text-h2"),
-  h1: classNames("text-h4 md:text-h3 lg:text-h2 xl:text-h1"),
-  custom1: classNames("text-[24px] md:text-[74px] lg:text-[84px] xl:text-[135px] leading-none"),
+  "2xl": classNames("text-md md:text-lg lg:text-xl xl:text-2xl"),
+  "3xl": classNames("text-lg md:text-xl lg:text-2xl xl:text-3xl"),
+  "4xl": classNames("text-xl md:text-2xl lg:text-3xl xl:text-4xl"),
+  "5xl": classNames("text-2xl md:text-3xl lg:text-4xl xl:text-5xl"),
+  "6xl": classNames("text-3xl md:text-4xl lg:text-5xl xl:text-6xl"),
+  "7xl": classNames("text-4xl md:text-5xl lg:text-6xl xl:text-7xl"),
+  "8xl": classNames("text-5xl md:text-6xl lg:text-7xl xl:text-8xl"),
+  "9xl": classNames("text-6xl md:text-7xl lg:text-8xl xl:text-9xl"),
+  custom1: classNames(
+    "text-4xl md:text-5xl lg:text-6xl xl:text-8xl 2xl:text-custom1 ",
+  ),
 };
 
-const TypographyWeightClasses: Record<TypographyWeightOption, TypographyWeightValue> = {
+const TypographyWeightClasses: Record<
+  TypographyWeightOption,
+  TypographyWeightValue
+> = {
   light: "font-light",
   regular: "font-normal",
   medium: "font-medium",
@@ -71,30 +91,29 @@ const TypographyFontFamilyClasses: Record<TypographyFontFamily, string> = {
 export interface TypographyProps {
   as?: "label";
   variant: TypographyVariant;
-  customColor?: string;
-  customWeight?: TypographyWeightOption;
+  color?: string;
+  weight?: TypographyWeightOption;
   className?: string;
   children: string | React.ReactNode;
   fontFamily?: TypographyFontFamily;
+  element?: ElementVariant;
 }
 
 const Typography: FC<TypographyProps> = ({
   as,
   variant,
-  customColor = "text-white",
-  customWeight = "regular",
+  color = "text-white",
+  weight = "regular",
   className,
   children,
   fontFamily = "poppins",
+  element = "p",
 }) => {
   const TypographyVariantClassName = TypographyVariantClasses[variant];
-  const TypographyWeightClassName = TypographyWeightClasses[customWeight];
+  const TypographyWeightClassName = TypographyWeightClasses[weight];
   const TypographyFontFamilyClassName = TypographyFontFamilyClasses[fontFamily];
 
-  // h1-h6 should have corresponding component
-  // others should be p
-  const isHeading = variant.startsWith("h");
-  const Component = as || ((isHeading ? variant : "p") as keyof JSX.IntrinsicElements);
+  const Component = as || (element as keyof JSX.IntrinsicElements);
 
   return (
     <Component
@@ -103,11 +122,7 @@ const Typography: FC<TypographyProps> = ({
         TypographyWeightClassName,
         TypographyFontFamilyClassName,
         className,
-        {
-          "tracking-tight": ["h1", "h2", "h3"].includes(variant),
-          // "text-black dark:text-white": !customColor,
-        },
-        customColor
+        color,
       )}
     >
       {children}

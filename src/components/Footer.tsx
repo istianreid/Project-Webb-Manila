@@ -8,8 +8,8 @@ export default function Footer() {
       <Line variant="horizontal" />
 
       <div className=" flex justify-between p-10">
-        <Typography variant="md"> @All Rights Reserved 2020-2024</Typography>
-        <Typography variant="md"> Designed by Richard Reid</Typography>
+        <Typography variant="md"> @All Rights Reserved 2024</Typography>
+        <Typography variant="md"> Designed by Reid</Typography>
       </div>
     </div>
   );

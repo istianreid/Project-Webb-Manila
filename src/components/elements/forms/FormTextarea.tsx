@@ -12,7 +12,14 @@ interface inputs {
   placeholder?: string;
 }
 
-export const FormTextarea = ({ name, label, required, errors, register, placeholder }: inputs) => {
+export const FormTextarea = ({
+  name,
+  label,
+  required,
+  errors,
+  register,
+  placeholder,
+}: inputs) => {
   return (
     <div className="flex w-full flex-col gap-2">
       <Typography variant="xl">{label}</Typography>
@@ -33,14 +40,14 @@ export const FormTextarea = ({ name, label, required, errors, register, placehol
               message: "Please enter at least 25 characters",
             },
           })}
-          className="block w-full border-b-2 border-white py-1 bg-black text-white focus:outline-none focus:ring-0 focus:ring-white"
+          className="block w-full border-b-2 border-white bg-black py-1 text-white focus:outline-none focus:ring-0 focus:ring-white"
           placeholder={placeholder}
         />
         <ErrorMessage
           errors={errors}
           name={name}
           render={({ message }) => (
-            <Typography variant="xs" customColor="text-red-400">
+            <Typography variant="xs" color="text-red-400">
               {message}
             </Typography>
           )}

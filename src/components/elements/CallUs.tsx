@@ -91,13 +91,13 @@ export default function CallUs() {
                     />
                   </div>
                   <div className="flex flex-col items-center justify-center gap-5">
-                    <Typography variant="h5" fontFamily="dmserif">
+                    <Typography variant="3xl" fontFamily="dmserif">
                       Call Us for inquiries
                     </Typography>
                     <div className="flex flex-wrap justify-center gap-5">
                       {links.map((item, i) => (
                         <Link key={i} href={`${item.link}`}>
-                          <div className="flex items-center gap-5 rounded-lg border-2 border-tradewind-500 p-2 lg:p-6 ">
+                          <div className="border-tradewind-500 flex items-center gap-5 rounded-lg border-2 p-2 lg:p-6 ">
                             <Image
                               src={item.icon}
                               alt={item.name}
@@ -106,10 +106,10 @@ export default function CallUs() {
                               className="w-[40px] lg:w-[50px]"
                             />
                             <div className="flex flex-col items-start">
-                              <Typography variant="lg" customWeight="bold">
+                              <Typography variant="lg" weight="bold">
                                 {item.name}
                               </Typography>
-                              <Typography variant="sm" customWeight="light">
+                              <Typography variant="sm" weight="light">
                                 {item.userName}
                               </Typography>
                             </div>

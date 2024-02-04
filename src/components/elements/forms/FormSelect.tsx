@@ -14,7 +14,16 @@ interface inputs {
   register: any;
 }
 
-export const FormSelect = ({ name, list, placeholder, errorMessage, label, required, errors, register }: inputs) => {
+export const FormSelect = ({
+  name,
+  list,
+  placeholder,
+  errorMessage,
+  label,
+  required,
+  errors,
+  register,
+}: inputs) => {
   return (
     <div className="flex w-full flex-col gap-1 p-2">
       <label>
@@ -47,7 +56,7 @@ export const FormSelect = ({ name, list, placeholder, errorMessage, label, requi
         errors={errors}
         name={name}
         render={({ message }) => (
-          <Typography variant="xs" customColor="text-red-500">
+          <Typography variant="xs" color="text-red-500">
             {message}
           </Typography>
         )}

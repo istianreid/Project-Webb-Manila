@@ -31,30 +31,36 @@ export default function Services() {
   return (
     <SectionContainer>
       <div className="container mx-auto ">
-        <div className="flex flex-col gap-10">
-          <Typography variant="h1" customWeight="bold">
+        <div className="flex flex-col gap-5 lg:gap-10">
+          <Typography element="h2" variant="7xl" weight="bold">
             WHAT WE DO.
           </Typography>
           <Line variant="horizontal" />
         </div>
 
-        <div className="flex justify-between my-32 ">
+        <div className="my-5 flex flex-wrap justify-center  gap-10  lg:my-10 xl:my-20 xl:gap-0  2xl:my-32">
           {services.map((item, i) => (
-            <div key={i} className="flex w-4/12 relative">
-              <div className="flex flex-col gap-10 p-10 ">
-                <Typography variant="h3" customWeight="medium">
+            <div
+              key={i}
+              className="relative flex w-full  border-b-2 border-r-0 border-white py-10 last:border-b-2 2xl:w-4/12 2xl:border-b-0 2xl:border-r-2 2xl:py-0 2xl:last:border-none"
+            >
+              <div className="flex flex-col gap-5 p-0 lg:gap-10 2xl:p-10 ">
+                <Typography element="h3" variant="5xl" weight="medium">
                   {item.title}
                 </Typography>
-                <Typography variant="lg" customWeight="light">
+                <Typography variant="lg" weight="light">
                   {item.content}
                 </Typography>
-                <Typography variant="h1" customWeight="bold" className="absolute bottom-0">
+                <Typography
+                  variant="7xl"
+                  weight="bold"
+                  className="absolute bottom-10 right-10 2xl:bottom-0 2xl:left-10"
+                >
                   {item.no}
                 </Typography>
 
                 <div className="h-[60px]"></div>
               </div>
-              {item.line === true ? <Line variant="vertical" /> : null}
             </div>
           ))}
         </div>
