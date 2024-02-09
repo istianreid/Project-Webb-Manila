@@ -32,7 +32,7 @@ export default function Services() {
     <SectionContainer>
       <div className="container mx-auto ">
         <div className="flex flex-col gap-5 lg:gap-10">
-          <Typography element="h2" variant="7xl" weight="bold">
+          <Typography element="h2" size="7xl" weight="bold">
             WHAT WE DO.
           </Typography>
           <Line variant="horizontal" />
@@ -45,14 +45,14 @@ export default function Services() {
               className="relative flex w-full  border-b-2 border-r-0 border-white py-10 last:border-b-2 2xl:w-4/12 2xl:border-b-0 2xl:border-r-2 2xl:py-0 2xl:last:border-none"
             >
               <div className="flex flex-col gap-5 p-0 lg:gap-10 2xl:p-10 ">
-                <Typography element="h3" variant="5xl" weight="medium">
+                <Typography element="h3" size="5xl" weight="medium">
                   {item.title}
                 </Typography>
-                <Typography variant="lg" weight="light">
+                <Typography size="lg" weight="light">
                   {item.content}
                 </Typography>
                 <Typography
-                  variant="7xl"
+                  size="7xl"
                   weight="bold"
                   className="absolute bottom-10 right-10 2xl:bottom-0 2xl:left-10"
                 >

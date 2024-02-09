@@ -22,7 +22,7 @@ export const FormTextarea = ({
 }: inputs) => {
   return (
     <div className="flex w-full flex-col gap-2">
-      <Typography variant="xl">{label}</Typography>
+      <Typography size="xl">{label}</Typography>
       <div className="flex w-full flex-col gap-1 ">
         <textarea
           rows={1}
@@ -47,7 +47,7 @@ export const FormTextarea = ({
           errors={errors}
           name={name}
           render={({ message }) => (
-            <Typography variant="xs" color="text-red-400">
+            <Typography size="xs" color="text-red-400">
               {message}
             </Typography>
           )}

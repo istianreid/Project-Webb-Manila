@@ -26,7 +26,7 @@ export const FormToogle = ({ value, onChange, label }: any) => {
         />
       </Switch>
       <Switch.Label>
-        <Typography variant="md">{label}</Typography>
+        <Typography size="md">{label}</Typography>
       </Switch.Label>
     </Switch.Group>
   );

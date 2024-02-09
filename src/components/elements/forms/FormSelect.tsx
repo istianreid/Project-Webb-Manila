@@ -27,7 +27,7 @@ export const FormSelect = ({
   return (
     <div className="flex w-full flex-col gap-1 p-2">
       <label>
-        <Typography variant="md" className="font-JacquesM">
+        <Typography size="md" className="font-JacquesM">
           {label}
         </Typography>
       </label>
@@ -56,7 +56,7 @@ export const FormSelect = ({
         errors={errors}
         name={name}
         render={({ message }) => (
-          <Typography variant="xs" color="text-red-500">
+          <Typography size="xs" color="text-red-500">
             {message}
           </Typography>
         )}

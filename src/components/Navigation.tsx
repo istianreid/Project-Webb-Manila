@@ -35,7 +35,7 @@ export default function Navigation() {
       <nav className="container mx-auto flex items-center justify-between p-5 lg:p-0 lg:py-5 ">
         <Link href="/">
           <Typography
-            variant="5xl"
+            size="5xl"
             weight="bold"
             color="text-malachite-500"
             className="z-90"
@@ -93,7 +93,7 @@ const MenuPopoutPanel = ({ isOpen, setOpen, links }: any) => {
                         ) => (
                           <li key={i}>
                             <Link href={item.link}>
-                              <Typography variant="5xl">{item.name}</Typography>
+                              <Typography size="5xl">{item.name}</Typography>
                             </Link>
                             {item.line === true ? (
                               <div className="absolute my-4 h-[1px] w-full bg-white"></div>
@@ -116,7 +116,7 @@ const MenuPopoutPanel = ({ isOpen, setOpen, links }: any) => {
                             className="flex flex-col items-center gap-5"
                           >
                             <Link href={item.link}>
-                              <Typography variant="5xl">{item.name}</Typography>
+                              <Typography size="5xl">{item.name}</Typography>
                             </Link>
                             {item.line === true ? (
                               <Line variant="horizontal" />

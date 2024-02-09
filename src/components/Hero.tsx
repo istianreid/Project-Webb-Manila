@@ -8,7 +8,7 @@ export default function Hero() {
       <div className="container mx-auto flex flex-col gap-10">
         <Typography
           element="h1"
-          variant="custom1"
+          size="custom1"
           weight="bold"
           className=" w-10/12 "
         >
@@ -21,7 +21,7 @@ export default function Hero() {
         <div className="flex justify-end">
           <Typography
             element="h2"
-            variant="lg"
+            size="lg"
             weight="light"
             className=" w-10/12 text-end lg:w-5/12"
           >

@@ -20,7 +20,7 @@ const dm_serif = DM_Serif_Display({
 
 type ElementVariant = "h1" | "h2" | "h3" | "p";
 
-type TypographyVariant =
+type TypographySize =
   // Text
   | "xs"
   | "sm"
@@ -53,7 +53,7 @@ type TypographyWeightValue =
 
 type TypographyFontFamily = "poppins" | "dmserif";
 
-const TypographyVariantClasses: Record<TypographyVariant, string> = {
+const TypographySizeClasses: Record<TypographySize, string> = {
   xs: classNames("text-[8px] md:text-xs"),
   sm: classNames("text-xs md:text-sm"),
   md: classNames("text-sm lg:text-md"),
@@ -90,7 +90,7 @@ const TypographyFontFamilyClasses: Record<TypographyFontFamily, string> = {
 
 export interface TypographyProps {
   as?: "label";
-  variant: TypographyVariant;
+  size: TypographySize;
   color?: string;
   weight?: TypographyWeightOption;
   className?: string;
@@ -101,7 +101,7 @@ export interface TypographyProps {
 
 const Typography: FC<TypographyProps> = ({
   as,
-  variant,
+  size,
   color = "text-white",
   weight = "regular",
   className,
@@ -109,7 +109,7 @@ const Typography: FC<TypographyProps> = ({
   fontFamily = "poppins",
   element = "p",
 }) => {
-  const TypographyVariantClassName = TypographyVariantClasses[variant];
+  const TypographyVariantClassName = TypographySizeClasses[size];
   const TypographyWeightClassName = TypographyWeightClasses[weight];
   const TypographyFontFamilyClassName = TypographyFontFamilyClasses[fontFamily];
 

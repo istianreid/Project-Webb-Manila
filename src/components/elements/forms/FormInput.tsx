@@ -54,7 +54,7 @@ export const FormInput = ({
   return (
     <div className="flex w-full flex-col gap-2">
       <label htmlFor={type}>
-        <Typography variant="md">{label}</Typography>
+        <Typography size="md">{label}</Typography>
       </label>
       <div className="flex flex-col gap-1">
         <input
@@ -69,7 +69,7 @@ export const FormInput = ({
           errors={errors}
           name={name}
           render={({ message }) => (
-            <Typography variant="xs" color="text-red-400">
+            <Typography size="xs" color="text-red-400">
               {message}
             </Typography>
           )}

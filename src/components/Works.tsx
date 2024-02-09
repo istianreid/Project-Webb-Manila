@@ -38,7 +38,7 @@ export default function Works() {
     <SectionContainer>
       <div className="container mx-auto ">
         <div className="flex flex-col gap-5 lg:gap-10">
-          <Typography element="h2" variant="7xl" weight="bold">
+          <Typography element="h2" size="7xl" weight="bold">
             RECENT & ONGOING WORK.
           </Typography>
           <Line variant="horizontal" />
@@ -52,14 +52,14 @@ export default function Works() {
             >
               <div className="flex w-full flex-col gap-5 lg:w-6/12 lg:gap-10 ">
                 <Typography
-                  variant="5xl"
+                  size="5xl"
                   weight="semibold"
                   className="lg:w-[95%] 2xl:w-[80%]"
                 >
                   {item.title}
                 </Typography>
                 <Typography
-                  variant="lg"
+                  size="lg"
                   weight="light"
                   className=" lg:w-[95%] 2xl:w-[80%]"
                 >

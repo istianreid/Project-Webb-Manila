@@ -61,7 +61,7 @@ export const Button: FC<ButtonProps> = ({
       )}
     >
       <Typography
-        variant="lg"
+        size="lg"
         className="flex items-center justify-center "
         weight="bold"
       >

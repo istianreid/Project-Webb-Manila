@@ -69,7 +69,7 @@ export default function ContactForm() {
     <SectionContainer>
       <div className="container mx-auto ">
         <div className="flex flex-col gap-5 lg:gap-10">
-          <Typography element="h2" variant="7xl" weight="bold">
+          <Typography element="h2" size="7xl" weight="bold">
             LET’S TALK
           </Typography>
           <Line variant="horizontal" />
@@ -120,7 +120,7 @@ export default function ContactForm() {
                   <div className="flex items-center gap-10 ">
                     <div>{item.icon}</div>
 
-                    <Typography variant="xl" weight="light">
+                    <Typography size="xl" weight="light">
                       {item.info}
                     </Typography>
                   </div>

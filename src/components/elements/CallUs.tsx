@@ -91,7 +91,7 @@ export default function CallUs() {
                     />
                   </div>
                   <div className="flex flex-col items-center justify-center gap-5">
-                    <Typography variant="3xl" fontFamily="dmserif">
+                    <Typography size="3xl" fontFamily="dmserif">
                       Call Us for inquiries
                     </Typography>
                     <div className="flex flex-wrap justify-center gap-5">
@@ -106,10 +106,10 @@ export default function CallUs() {
                               className="w-[40px] lg:w-[50px]"
                             />
                             <div className="flex flex-col items-start">
-                              <Typography variant="lg" weight="bold">
+                              <Typography size="lg" weight="bold">
                                 {item.name}
                               </Typography>
-                              <Typography variant="sm" weight="light">
+                              <Typography size="sm" weight="light">
                                 {item.userName}
                               </Typography>
                             </div>
