@@ -21,7 +21,7 @@ const config: Config = {
       "7xl": ["72px", "90px"],
       "8xl": ["96px", "104px"],
       "9xl": ["120px", "128px"],
-      custom1: ["135px", "135px"],
+      custom1: ["135px", "125px"],
     },
     container: {
       screens: {

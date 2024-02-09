@@ -10,7 +10,7 @@ export default function Hero() {
           element="h1"
           size="custom1"
           weight="bold"
-          className=" w-10/12 "
+          className=" w-10/12"
         >
           CREATIVE WEBSITE SIMPLIFIES SALES & MARKETING
         </Typography>

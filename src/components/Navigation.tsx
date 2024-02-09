@@ -31,8 +31,8 @@ export default function Navigation() {
   ];
 
   return (
-    <div>
-      <nav className="container mx-auto flex items-center justify-between p-5 lg:p-0 lg:py-5 ">
+    <div className="px-5 lg:px-10">
+      <nav className="container mx-auto flex items-center justify-between py-5 lg:px-0 lg:py-5 ">
         <Link href="/">
           <Typography
             size="5xl"
