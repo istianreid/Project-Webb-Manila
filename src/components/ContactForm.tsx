@@ -68,11 +68,11 @@ export default function ContactForm() {
   return (
     <SectionContainer>
       <div className="container mx-auto ">
-        <div className="flex flex-col gap-5 lg:gap-10">
+        <div className="flex flex-col items-center justify-center gap-5 lg:gap-10">
           <Typography element="h2" size="7xl" weight="bold">
             LET’S TALK
           </Typography>
-          <Line variant="horizontal" />
+          {/* <Line variant="horizontal" /> */}
         </div>
 
         <div className=" flex  flex-wrap xl:my-32">

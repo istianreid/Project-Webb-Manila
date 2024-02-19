@@ -1,17 +1,18 @@
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
-import Hero from "@/components/Hero";
+import HeroV2 from "@/components/Hero_v2";
 import Navigation from "@/components/Navigation";
-import Services from "@/components/Services";
-import Works from "@/components/Works";
+
+import ServicesV2 from "@/components/Services_v2";
+import WorksV2 from "@/components/Works_v2";
 
 export default function Home() {
   return (
     <main>
       <Navigation />
-      <Hero />
-      <Services />
-      <Works />
+      <HeroV2 />
+      <ServicesV2 />
+      <WorksV2 />
       <ContactForm />
       <Footer />
     </main>
