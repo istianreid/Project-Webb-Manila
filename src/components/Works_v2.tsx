@@ -37,7 +37,7 @@ export default function WorksV2() {
   return (
     <SectionContainer>
       <div className="container mx-auto flex flex-col items-center gap-10 lg:gap-20 ">
-        <Typography element="h2" size="7xl" weight="bold">
+        <Typography element="h2" size="7xl" weight="black">
           PROJECTS.
         </Typography>
 

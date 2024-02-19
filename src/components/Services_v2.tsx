@@ -27,8 +27,8 @@ export default function ServicesV2() {
   return (
     <SectionContainer>
       <div className="container mx-auto flex flex-col items-center justify-center gap-10 lg:gap-20 ">
-        <Typography element="h2" size="7xl" weight="bold">
-          Services.
+        <Typography element="h2" size="7xl" weight="black">
+          SERVICES.
         </Typography>
 
         <div>

@@ -6,16 +6,11 @@ export default function HeroV2() {
   return (
     <SectionContainer>
       <div className="container mx-auto flex flex-col items-center  gap-10 text-center">
-        <Typography
-          element="h2"
-          size="3xl"
-          weight="bold"
-          color="text-malachite-500"
-        >
+        <Typography element="h2" size="3xl" color="text-malachite-500">
           Freelance Web Design & Development
         </Typography>
 
-        <Typography element="h1" size="custom1" weight="bold">
+        <Typography element="h1" size="custom1" weight="extrabold">
           SIMPLIFY YOUR MARKETING & GROW YOUR SALES
         </Typography>
 
@@ -23,7 +18,7 @@ export default function HeroV2() {
           element="h3"
           size="lg"
           weight="light"
-          className=" w-[80%] lg:w-1/2"
+          className="w-[80%] xl:w-[35%]"
         >
           We help Small and Medium Enterprises (SMEs), to promote products and
           services, showcase portfolios, and enhance online credibility. To

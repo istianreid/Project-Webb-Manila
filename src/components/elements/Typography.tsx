@@ -42,14 +42,18 @@ type TypographyWeightOption =
   | "regular"
   | "medium"
   | "semibold"
-  | "bold";
+  | "bold"
+  | "extrabold"
+  | "black";
 
 type TypographyWeightValue =
   | "font-light"
   | "font-normal"
   | "font-medium"
   | "font-semibold"
-  | "font-bold";
+  | "font-bold"
+  | "font-extrabold"
+  | "font-black";
 
 type TypographyFontFamily = "poppins" | "dmserif";
 
@@ -68,7 +72,7 @@ const TypographySizeClasses: Record<TypographySize, string> = {
   "8xl": classNames("text-5xl md:text-6xl lg:text-7xl xl:text-8xl"),
   "9xl": classNames("text-6xl md:text-7xl lg:text-8xl xl:text-9xl"),
   custom1: classNames(
-    "text-4xl md:text-5xl lg:text-6xl xl:text-8xl 2xl:text-custom1 ",
+    "text-[36px] md:text-[48px] lg:text-[60px] xl:text-[96px] 2xl:text-[135px] leading-[90%]",
   ),
 };
 
@@ -81,6 +85,8 @@ const TypographyWeightClasses: Record<
   medium: "font-medium",
   semibold: "font-semibold",
   bold: "font-bold",
+  extrabold: "font-extrabold",
+  black: "font-black",
 };
 
 const TypographyFontFamilyClasses: Record<TypographyFontFamily, string> = {

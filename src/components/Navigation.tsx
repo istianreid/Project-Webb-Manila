@@ -36,15 +36,20 @@ export default function Navigation() {
         <Link href="/">
           <Typography
             size="5xl"
-            weight="bold"
+            weight="extrabold"
             color="text-malachite-500"
-            className="z-90"
+            className="z-90 tracking-[-3px]"
           >
-            webbmanila
+            webbmanila.com
           </Typography>
         </Link>
 
-        <Hamburger size={40} color="white" toggled={isOpen} toggle={setOpen} />
+        <Hamburger
+          size={40}
+          color="#02d825"
+          toggled={isOpen}
+          toggle={setOpen}
+        />
       </nav>
 
       <MenuPopoutPanel isOpen={isOpen} setOpen={setOpen} links={links} />
@@ -79,7 +84,7 @@ const MenuPopoutPanel = ({ isOpen, setOpen, links }: any) => {
                   <div className="flex justify-end p-5">
                     <Hamburger
                       size={40}
-                      color="white"
+                      color="#02d825"
                       toggled={isOpen}
                       toggle={setOpen}
                     />
