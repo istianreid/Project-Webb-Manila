@@ -9,7 +9,7 @@ export default function Footer() {
 
       <div className=" flex justify-between p-10">
         <Typography size="md"> @All Rights Reserved 2024</Typography>
-        <Typography size="md"> Designed by Reid</Typography>
+        {/* <Typography size="md"> Designed by Reid</Typography> */}
       </div>
     </div>
   );

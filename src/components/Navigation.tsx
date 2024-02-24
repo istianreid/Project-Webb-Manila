@@ -78,10 +78,10 @@ const MenuPopoutPanel = ({ isOpen, setOpen, links }: any) => {
               leaveFrom="translate-x-0"
               leaveTo="translate-x-full"
             >
-              <div className="pointer-events-auto w-full border-2 border-black bg-black lg:border-white ">
+              <div className="pointer-events-auto w-full  bg-black p-5 ">
                 {/* navigation */}
                 <div className="flex h-screen  flex-col  ">
-                  <div className="flex justify-end p-5">
+                  <div className="flex justify-end">
                     <Hamburger
                       size={40}
                       color="#02d825"
@@ -89,7 +89,7 @@ const MenuPopoutPanel = ({ isOpen, setOpen, links }: any) => {
                       toggle={setOpen}
                     />
                   </div>
-                  <div className="mx-auto mt-10  hidden border-r-2 lg:block">
+                  {/* <div className="mx-auto mt-10  hidden border-r-2 lg:block">
                     <ul className="relative m-10 flex  list-none flex-col  gap-8 p-10 lg:items-start">
                       {links.map(
                         (
@@ -107,10 +107,33 @@ const MenuPopoutPanel = ({ isOpen, setOpen, links }: any) => {
                         ),
                       )}
                     </ul>
-                  </div>
+                  </div> */}
 
-                  <div className="mx-auto mt-10 block  w-full lg:hidden">
+                  {/* <div className="mx-auto mt-10 block  w-full lg:hidden">
                     <ul className=" m-10 flex  list-none flex-col  gap-8  p-10 lg:items-start">
+                      {links.map(
+                        (
+                          item: { name: string; link: string; line: boolean },
+                          i: number,
+                        ) => (
+                          <li
+                            key={i}
+                            className="flex flex-col items-center gap-5"
+                          >
+                            <Link href={item.link}>
+                              <Typography size="5xl">{item.name}</Typography>
+                            </Link>
+                            {item.line === true ? (
+                              <Line variant="horizontal" />
+                            ) : null}
+                          </li>
+                        ),
+                      )}
+                    </ul>
+                  </div> */}
+
+                  <div className="mx-auto mt-10 block w-full ">
+                    <ul className=" m-10 flex list-none flex-col gap-8 p-10 lg:items-center">
                       {links.map(
                         (
                           item: { name: string; link: string; line: boolean },

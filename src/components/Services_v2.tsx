@@ -11,13 +11,11 @@ export default function ServicesV2() {
       subTitile:
         "Unlock the full potential of your online presence with our Web Development Package.",
       services: [
-        "Web Design",
-        "Web Development",
+        "Web Design & Development",
+        "Social Media & Google Map Integration",
+        "Email & Messenger Integration",
         "Basic SEO Optimization",
         "Mobile Responsiveness",
-        "Social Media Integration",
-        "Google Map Integration",
-        "Email & Messenger Integration",
         "Domain & Hosting ( 1 Year )",
         "Free Maintenance & Enhancement ( 1 Year )",
       ],
@@ -38,12 +36,13 @@ export default function ServicesV2() {
               className="flex flex-col gap-10 border-2 border-white p-5 lg:p-20"
             >
               <div className="flex flex-col gap-5">
-                <Typography element="h2" size="5xl">
+                <Typography element="h2" size="5xl" weight="bold">
                   {item.title}
                 </Typography>
                 <Typography
                   size="lg"
                   className="mx-auto text-center lg:w-[60%]"
+                  weight="light"
                 >
                   {item.subTitile}
                 </Typography>
@@ -52,7 +51,9 @@ export default function ServicesV2() {
               <ul className="mx-auto flex  w-[90%] list-disc flex-col gap-2 text-white">
                 {item.services.map((service, i) => (
                   <li key={i}>
-                    <Typography size="lg"> {service}</Typography>
+                    <Typography size="lg" weight="light">
+                      {service}
+                    </Typography>
                   </li>
                 ))}
               </ul>

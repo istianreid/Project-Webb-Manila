@@ -7,15 +7,11 @@ import { Inter, Poppins, DM_Serif_Display } from "next/font/google";
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-  variable: "--font-poppins",
-  display: "swap",
 });
 
 const dm_serif = DM_Serif_Display({
   subsets: ["latin"],
   weight: ["400"],
-  variable: "--font-dm-serif",
-  display: "swap",
 });
 
 type ElementVariant = "h1" | "h2" | "h3" | "p";
