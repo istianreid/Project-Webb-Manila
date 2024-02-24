@@ -24,7 +24,7 @@ export default function ServicesV2() {
 
   return (
     <SectionContainer>
-      <div className="container mx-auto flex flex-col items-center justify-center gap-10 lg:gap-20 ">
+      <div className="container mx-auto flex flex-col items-start justify-center gap-10 lg:items-center lg:gap-20 ">
         <Typography element="h2" size="7xl" weight="black">
           SERVICES.
         </Typography>
@@ -33,7 +33,7 @@ export default function ServicesV2() {
           {services.map((item, i) => (
             <div
               key={i}
-              className="flex flex-col gap-10 border-2 border-white p-5 lg:p-20"
+              className="flex flex-col gap-5 border-2 border-white p-5 lg:gap-10 lg:p-20"
             >
               <div className="flex flex-col gap-5">
                 <Typography element="h2" size="5xl" weight="bold">
@@ -41,7 +41,7 @@ export default function ServicesV2() {
                 </Typography>
                 <Typography
                   size="lg"
-                  className="mx-auto text-center lg:w-[60%]"
+                  className="mx-auto text-start lg:w-[60%] lg:text-center"
                   weight="light"
                 >
                   {item.subTitile}

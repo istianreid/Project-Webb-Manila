@@ -5,17 +5,23 @@ import Typography from "./elements/Typography";
 export default function HeroV2() {
   return (
     <SectionContainer>
-      <div className="container mx-auto flex flex-col items-center  gap-10 text-center">
+      <div className="container mx-auto flex flex-col items-start gap-8 pt-0  text-start lg:items-center lg:gap-10 lg:pt-20 lg:text-center">
         <Typography
           element="h2"
           size="3xl"
           weight="light"
           color="text-malachite-500"
+          className="hidden lg:block"
         >
           Freelance Web Design & Development
         </Typography>
 
-        <Typography element="h1" size="custom1" weight="extrabold">
+        <Typography
+          element="h1"
+          size="custom1"
+          weight="extrabold"
+          className="w-[90%]"
+        >
           SIMPLIFY YOUR MARKETING & GROW YOUR SALES
         </Typography>
 

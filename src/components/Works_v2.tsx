@@ -10,14 +10,14 @@ export default function WorksV2() {
     {
       title: "XTREME AUTO FZE",
       content:
-        "Xtreme Auto FZE is a car dealership of pre-owned 4WD from Australia and other countries. In 2002, the company was founded in Dubai. The new leadership wants Xtreme Auto FZE to be well-known throughout the UAE and eventually the world.",
+        "Xtreme Auto FZE is a car dealership of pre-owned 4WD from Australia and other countries. In 2002, the company was founded in Dubai.",
       image: "/work images/Xreme Auto Fze.png",
       link: "https://www.xtremeauto4x4.com/",
     },
     {
       title: "CHUMMY STAR DENTAL CARE",
       content:
-        "Transforming smiles through comprehensive dental expertise, from orthodontics to cosmetic procedures, implants, surgeries, and general care.",
+        "Chummy Star Dental Care, the place where you can get top-notch dental services with a personal touch in your neighborhood.",
       image: "/work images/Chummy Star.png",
       link: "https://www.chummystardentalcare.com/",
     },
@@ -38,7 +38,7 @@ export default function WorksV2() {
 
   return (
     <SectionContainer>
-      <div className="container mx-auto flex flex-col items-center gap-10 lg:gap-20 ">
+      <div className="container mx-auto flex flex-col items-start gap-10 lg:items-center lg:gap-20 ">
         <Typography element="h2" size="7xl" weight="black">
           PROJECTS.
         </Typography>
@@ -47,7 +47,7 @@ export default function WorksV2() {
           {work.map((item, i) => (
             <div
               key={i}
-              className="flex w-full flex-col gap-5 py-10 lg:w-[50%] lg:gap-10 lg:p-10 "
+              className="flex w-full flex-col gap-5 pb-10 lg:w-[50%] lg:gap-10 lg:p-10 "
             >
               <Link href={item.link} target="_blank">
                 <Image
@@ -60,7 +60,7 @@ export default function WorksV2() {
 
               <div className=" flex flex-col items-start gap-5">
                 <Link href={item.link} target="_blank">
-                  <Typography size="5xl" weight="semibold" className="">
+                  <Typography size="5xl" weight="bold" className="">
                     {item.title}
                   </Typography>
                 </Link>

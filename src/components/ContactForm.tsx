@@ -67,18 +67,15 @@ export default function ContactForm() {
 
   return (
     <SectionContainer>
-      <div className="container mx-auto ">
-        <div className="flex flex-col items-center justify-center gap-5 lg:gap-10">
-          <Typography element="h2" size="7xl" weight="bold">
-            LET’S TALK
-          </Typography>
-          {/* <Line variant="horizontal" /> */}
-        </div>
+      <div className="container mx-auto flex flex-col items-start justify-center gap-10 lg:items-center lg:gap-20 ">
+        <Typography element="h2" size="7xl" weight="bold">
+          LET’S TALK
+        </Typography>
 
-        <div className=" flex  flex-wrap xl:my-32">
+        <div className="flex w-full flex-wrap">
           <form
             onSubmit={handleSubmit(onSubmitForm)}
-            className="mx-auto flex w-full flex-col gap-5 px-5 py-20 lg:gap-10 xl:w-6/12 xl:p-10 "
+            className="mx-auto flex w-full flex-col gap-5 px-5 py-5 lg:gap-10 lg:py-20 xl:w-6/12 xl:p-10 "
           >
             <FormInput
               name="name"

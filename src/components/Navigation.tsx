@@ -15,17 +15,17 @@ export default function Navigation() {
   const links = [
     {
       link: "/",
-      name: "WHAT WE DO",
+      name: "SERVICES",
       line: true,
     },
     {
       link: "/",
-      name: "RECENT WORKS",
+      name: "PROJECTS",
       line: true,
     },
     {
       link: "/",
-      name: "LET'S TALK",
+      name: "CONTACT",
       line: false,
     },
   ];
@@ -38,7 +38,7 @@ export default function Navigation() {
             size="5xl"
             weight="extrabold"
             color="text-malachite-500"
-            className="z-90 tracking-[-3px]"
+            className="z-90 tracking-[-1px] lg:tracking-[-3px]"
           >
             webbmanila.com
           </Typography>

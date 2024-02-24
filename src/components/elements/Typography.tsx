@@ -68,7 +68,7 @@ const TypographySizeClasses: Record<TypographySize, string> = {
   "8xl": classNames("text-5xl md:text-6xl lg:text-7xl xl:text-8xl"),
   "9xl": classNames("text-6xl md:text-7xl lg:text-8xl xl:text-9xl"),
   custom1: classNames(
-    "text-[36px] md:text-[48px] lg:text-[60px] xl:text-[96px] 2xl:text-[135px] leading-[90%]",
+    "text-[56px] md:text-[70px] lg:text-[70px] xl:text-[96px] 2xl:text-[135px] leading-[90%]",
   ),
 };
 
